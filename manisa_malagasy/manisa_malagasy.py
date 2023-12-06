@@ -21,7 +21,7 @@ ampolo = {
     6:"enimpolo",
     7:"fitopolo",
     8:"valpolo",
-    9:"sivfolo"
+    9:"sivifolo"
 }
 
 def manisa_malagasi(n):
@@ -40,4 +40,4 @@ def manisa_malagasi(n):
     
     
     
-print(manisa_malagasi(12))
+print(manisa_malagasi(99))
