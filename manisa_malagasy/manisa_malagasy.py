@@ -68,17 +68,15 @@ def manisa_malagasi(n):
             else : isa_malagasy = isa[n/1000] + " arivo "
             return isa_malagasy
         else:
-            isa_malagasy = manisa_malagasi(n%1000) + " sy " + manisa_malagasi(n - n%1000)
-            return isa_malagasy
+            return manisa_malagasi(n%1000) + " sy " + manisa_malagasi(n - n%1000) 
     elif n >= 10000 and n <100000:
         if n % 10000 == 0:
             tete = "iray" if n/10000 == 1 else manisa_malagasi(n/10000)
-            isa_malagasy = tete + " alina "
-            return isa_malagasy
+            return tete + " alina "
         else:
             return manisa_malagasi(n%10000) + " sy " + manisa_malagasi(n - n%10000)
     else: return None
     
-for i in range(10000,100000):
+for i in range(1,100000):
     print(f" {i} {manisa_malagasi(i)}")
 #print(manisa_malagasi(10000))
