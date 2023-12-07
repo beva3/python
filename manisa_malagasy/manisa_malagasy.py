@@ -67,8 +67,11 @@ def manisa_malagasi(n):
             if n/1000 == 1: isa_malagasy = "arivo"
             else : isa_malagasy = isa[n/1000] + " arivo "
             return isa_malagasy
+        else:
+            isa_malagasy = manisa_malagasi(n%1000) + " sy " + manisa_malagasi(n - n%1000)
+            return isa_malagasy
     else: return None
     
-for i in range(1,1000):
-    print(f" {i} {manisa_malagasi(i)}")
-#print(manisa_malagasi(5000))
+#for i in range(1000,9999):
+#    print(f" {i} {manisa_malagasi(i)}")
+print(manisa_malagasi(1101))
