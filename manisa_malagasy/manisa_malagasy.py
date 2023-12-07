@@ -16,7 +16,7 @@ ampolo = {
     1:"folo",
     2:"roapolo",
     3:"telopolo",
-    4:"efatrapolo",
+    4:"efapolo",
     5:"dimapolo",
     6:"enimpolo",
     7:"fitopolo",
@@ -30,6 +30,9 @@ def manisa_malagasi(n):
         isa_malagasy = isa[n]
         return isa_malagasy
     elif n >10 and n <100:
+        if n%10 == 0:
+            isa_malagasy = ampolo[n/10]
+            return isa_malagasy
         if n % 10 == 1:
             isa_malagasy = "iraika " + "ambin'ny " + ampolo[(int)(n/10)]
             return isa_malagasy
@@ -38,6 +41,5 @@ def manisa_malagasi(n):
             return isa_malagasy
     else: return None
     
-    
-    
-print(manisa_malagasi(99))
+for i in range(1,100):
+    print(manisa_malagasi(i))
