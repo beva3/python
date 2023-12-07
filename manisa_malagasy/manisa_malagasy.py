@@ -33,6 +33,7 @@ anjato = {
     8:"valonjato",
     9:"sivinjato"
 }
+
 def manisa_malagasi(n):
     if n < 10:
         isa_malagasy = isa[n]
@@ -60,7 +61,13 @@ def manisa_malagasi(n):
             if n == 100: isa_malagasy = tete + " amby zato"
             else : isa_malagasy = tete + " sy " + anjato[(int)(n/100)]
             return isa_malagasy
+
+    elif n >= 1000 and n<10000:
+        if n % 1000 == 0:
+            isa_malagasy = isa[n/1000] + " arivo"
+            return isa_malagasy
     else: return None
     
-for i in range(1,1000):
-    print(f" {i} {manisa_malagasi(i)}")
+#for i in range(1,1000):
+#    print(f" {i} {manisa_malagasi(i)}")
+print(manisa_malagasi(5000))
