@@ -1,5 +1,4 @@
 
-
 isa = {
     1:"ray",
     2:"roa",
@@ -26,7 +25,7 @@ ampolo = {
 anjato = {
     1:"zato",
     2:"roanjato",
-    3:"telnjato",
+    3:"telonjato",
     4:"efajato",
     5:"dimanjato",
     6:"eninjato",
@@ -52,15 +51,16 @@ def manisa_malagasi(n):
         if n%100 == 0:
             isa_malagasy = anjato[n/100]
             return isa_malagasy
-        elif n%100 < 10:
-            if n < 200:
-                if n%100 == 1:
-                    tete = "iraika"
-                else:
-                    tete = manisa_malagasi(n%100)
-                isa_malagasy = tete + " amby zato"
-                return isa_malagasy
+        else:
+            if n%100 == 1:
+                tete = "iraika"
+            else:
+                tete = manisa_malagasi(n%100)
+                
+            if n == 100: isa_malagasy = tete + " amby zato"
+            else : isa_malagasy = tete + " sy " + anjato[(int)(n/100)]
+            return isa_malagasy
     else: return None
     
-#for i in range(1,10):
-print(manisa_malagasi(101))
+for i in range(1,1000):
+    print(f" {i} {manisa_malagasi(i)}")
