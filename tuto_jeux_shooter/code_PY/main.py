@@ -28,7 +28,13 @@ while runing:
     #appliquer l'image de mon joueur
     screen.blit(game.player.image,game.player.rect)
     
-    print(game.pressed)
+    #print(game.pressed)
+    
+    #verififer si le joueur sohait aller a gauche ou a droite
+    if game.pressed.get(pygame.K_RIGHT):
+        game.player.move_right()
+    if game.pressed.get(pygame.K_LEFT):
+        game.player.move_left()
     
     #mise a jour de l'ecran
     pygame.display.flip()
