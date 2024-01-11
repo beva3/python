@@ -11,6 +11,8 @@ class Player(pygame.sprite.Sprite): # obj en mouvement
         self.velocity = 5
         self.image = pygame.image.load('../assets/player.png')
         self.rect = self.image.get_rect()
+        self.rect.x = 400
+        self.rect.y = 400
 
 #generer la fenetre de jeux
 pygame.display.set_caption("Mon jeux shooter")
