@@ -39,3 +39,11 @@ while runing:
         if event.type == pygame.QUIT:
             runing = False
             pygame.quit()
+
+        #detecter si un joueur lache une touche du clavier
+        elif event.type == pygame.KEYDOWN:
+            #quelle touche a ete utilise
+            if event.key == pygame.K_LEFT:
+                print("vers gauche")
+            elif event.key == pygame.K_RIGHT:
+                print("vers droite")
