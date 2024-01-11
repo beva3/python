@@ -2,6 +2,12 @@ import pygame
 
 pygame.init()
 
+#creer une second class qui va representer notre jeu
+class Game:
+    #generer notre joueur
+    def __init__(self):
+        self.player = Player()
+
 #creer une premier class qui va  representer notre premier joueur
 class Player(pygame.sprite.Sprite): # obj en mouvement    
     def __init__(self):
@@ -21,9 +27,11 @@ screen = pygame.display.set_mode((1080,600))
 #importer de charger l'arierre plan cd notre jeux
 background = pygame.image.load("../assets/bg.jpg")
 
-#charger notre joueur
+""" #charger notre joueur
 player = Player()
-
+ """
+#charger notre jeux
+game =  Game()
 runing =True
 
 #le boucle tant que cette ondtition est vrai
@@ -34,7 +42,7 @@ while runing:
     screen.blit(background,(0,-300))
     
     #appliquer l'image de mon joueur
-    screen.blit(player.image,player.rect)
+    screen.blit(game.player.image,game.player.rect)
     
     #mise a jour de l'ecran
     pygame.display.flip()
