@@ -6,3 +6,4 @@ class Game:
     #generer notre joueur
     def __init__(self):
         self.player = Player()
+        self.pressed = {} #dict
