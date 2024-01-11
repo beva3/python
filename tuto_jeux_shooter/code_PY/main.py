@@ -44,6 +44,8 @@ while runing:
         elif event.type == pygame.KEYDOWN:
             #quelle touche a ete utilise
             if event.key == pygame.K_LEFT:
-                print("vers gauche")
+                #print("vers gauche")
+                game.player.move_left()
             elif event.key == pygame.K_RIGHT:
+                #game.player.move_right()
                 print("vers droite")
