@@ -1,24 +1,8 @@
 import pygame
+from player import Player
+from game import Game
 
 pygame.init()
-
-#creer une second class qui va representer notre jeu
-class Game:
-    #generer notre joueur
-    def __init__(self):
-        self.player = Player()
-
-#creer une premier class qui va  representer notre premier joueur
-class Player(pygame.sprite.Sprite): # obj en mouvement    
-    def __init__(self):
-        self.health = 100
-        self.max_health = 100
-        self.attack = 10
-        self.velocity = 5
-        self.image = pygame.image.load('../assets/player.png')
-        self.rect = self.image.get_rect()
-        self.rect.x = 400
-        self.rect.y = 400
 
 #generer la fenetre de jeux
 pygame.display.set_caption("Mon jeux shooter")
