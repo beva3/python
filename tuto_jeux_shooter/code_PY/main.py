@@ -36,6 +36,8 @@ while runing:
     if game.pressed.get(pygame.K_LEFT):
         game.player.move_left()
     
+    #print(game.player.rect.x)
+    
     #mise a jour de l'ecran
     pygame.display.flip()
     
