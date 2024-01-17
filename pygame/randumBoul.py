@@ -1,6 +1,8 @@
 import pygame
 import random
 
+pygame.init()
+
 class Circle:
     def __init__(self,x,y,radius,color):
         self.x = x
@@ -13,7 +15,9 @@ class Circle:
 #creation de la fenetre      
 screen = pygame.display.set_mode((400,400))
 #creer cercle
-""" circle = Circle(200,200,50,(0,0,0)) """
+x = 2
+y = 2
+""" circle = Circle(x,y,50,(0,0,0)) """
 #Couleur de fond
 screen.fill((60,128,0))
 
@@ -22,7 +26,6 @@ pygame.display.flip()
 runing = True
 
 
-pygame.init()
 
 while runing:
     for event in pygame.event.get():
@@ -31,7 +34,9 @@ while runing:
             runing = False
     
     #Affichage du Cercle
-    circle = Circle(200,200,50,(0,0,0))
+    x = random.randint(100,screen.get_width()-100)
+    y = random.randint(100,screen.get_height()-100)
+    circle = Circle(x,y,1,(0,0,0))
     circle.draw(screen)
     pygame.display.flip()
 pygame.quit()
